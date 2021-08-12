@@ -12,9 +12,13 @@ function App() {
         <Draggable>
         <img src={logo} className="App-logo" alt="logo" />
         </Draggable>
+        
 
         <p>
           Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <p id= "coordinates">
+          
         </p>
         <a
           className="App-link"

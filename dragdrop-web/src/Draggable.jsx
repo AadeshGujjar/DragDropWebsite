@@ -1,5 +1,5 @@
 import React from 'react';
-import { finished } from 'stream';
+import "./App";
 
 
 
@@ -67,6 +67,15 @@ handleMouseUp=()=>{
     savedPositions.push(JSON.stringify(finalCoods));
     console.log(typeof(savedPositions));
     console.log(savedPositions);
+
+    var storedCoordinates= localStorage.getItem("storedCoordinates");
+
+    function save(){
+        //var Item= document.getElementById("coordinates");
+        localStorage.setItem("storedCoordinates", savedPositions);
+        document.getElementById("coordinates").innerHTML=savedPositions + "<br>";
+    }
+    save();
 
     this.setState({
         originalX:0,
